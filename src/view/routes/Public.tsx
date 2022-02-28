@@ -5,6 +5,7 @@ import { Accordion } from '../components/Accordion/Accordion';
 import { Data } from '../components/Accordion/accordionsData';
 import { News } from '../components/News/News';
 import { PostsApiLoader } from '../components/PostsApiLoader';
+import { StudentProfile } from '../components/StudentProfile';
 import { StudentRegistration } from '../components/StudentRegistration';
 
 // Pages
@@ -32,6 +33,10 @@ export const Public: FC = () => {
         {
             path:    '4',
             element: <StudentRegistration />,
+        },
+        {
+            path:    '5',
+            element: <StudentProfile />,
         },
     ]);
 
