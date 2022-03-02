@@ -1,4 +1,6 @@
 {
+    "eslint.autoFixOnSave": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     "better-comments.tags": [
         // -------------------------------------------------------
         {
@@ -151,4 +153,7 @@
             "backgroundColor": "rgb(253,184,51, 0.2)",
         },
     ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
 }

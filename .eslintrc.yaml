@@ -115,9 +115,6 @@ rules:
     react/jsx-equals-spacing:
         - 2
         - always
-    react/jsx-indent:
-        - 2
-        - 4
     react/jsx-indent-props:
         - 2
         - 4
@@ -464,9 +461,3 @@ rules:
     # "@typescript-eslint/no-unused-vars-experimental": 2
     "@typescript-eslint/no-unused-vars": 2
     "@typescript-eslint/no-use-before-define": 2
-    "@typescript-eslint/indent":
-        - 2
-        - 4
-        - SwitchCase: 1
-          MemberExpression: 1
-          ArrayExpression: 1

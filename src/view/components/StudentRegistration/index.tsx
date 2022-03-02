@@ -2,9 +2,12 @@ import React from 'react';
 import { Field, Formik } from 'formik';
 import { FormWrapper } from './styles';
 import { studentSchema } from './validation';
+import { useStudentProfile } from '../../../bus/studentProfile';
+import { useNavigate } from 'react-router-dom';
 
 export const StudentRegistration = () => {
-    () => ({ color: '' });
+    const { studentProfile, setStudentProfile } = useStudentProfile();
+    const navigate = useNavigate();
 
     return (
         <FormWrapper>
@@ -21,7 +24,9 @@ export const StudentRegistration = () => {
                 }
                 validationSchema = { studentSchema }
                 onSubmit = { (value) => {
-                    console.log(value);
+                    console.log(studentProfile);
+                    setStudentProfile(value);
+                    navigate('/5');
                 } }>
                 {({ errors, touched, handleSubmit }) => (
                     <form onSubmit = { handleSubmit } >
