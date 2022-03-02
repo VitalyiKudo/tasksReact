@@ -35,7 +35,7 @@ export const StudentProfile = () => {
                 <div className = 'profile-content'>
                     <div className = 'main-info'>
                         <h1 className = 'info-heading'>Basic information</h1>
-                        <p className = 'info-content'><span className = 'info-name'>Full name: </span>{`${studentProfile.firstName} + ${studentProfile.surName}`}</p>
+                        <p className = 'info-content'><span className = 'info-name'>Full name: </span>{`${studentProfile.firstName} ${studentProfile.surName}`}</p>
                         <p className = 'info-content'><span className = 'info-name'>Email: </span>{studentProfile.email}</p>
                         <p className = 'info-content'><span className = 'info-name'>Speciality: </span>{studentProfile.speciality}</p>
                     </div>
