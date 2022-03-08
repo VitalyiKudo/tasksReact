@@ -3,16 +3,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { useSelector } from '../../tools/hooks';
 
-const initialState = {
-    data: {
-        firstName:  '',
-        surName:    '',
-        age:        '',
-        email:      '',
-        sex:        '',
-        speciality: '',
-    },
-};
 
 // Types
 type dataType = {
@@ -25,6 +15,17 @@ type dataType = {
 }
 
 // Slice
+const initialState = {
+    data: {
+        firstName:  '',
+        surName:    '',
+        age:        '',
+        email:      '',
+        sex:        '',
+        speciality: '',
+    },
+};
+
 export const studentSlice = createSlice({
     name:     'studentProfile',
     initialState,
@@ -35,10 +36,10 @@ export const studentSlice = createSlice({
     },
 });
 
-// Interfaces
 export const studentActions = studentSlice.actions;
 export default studentSlice.reducer;
 
+// Hook
 export const useStudentProfile = () => {
     const dispatch = useDispatch();
 

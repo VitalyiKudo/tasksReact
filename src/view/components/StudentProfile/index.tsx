@@ -14,7 +14,7 @@ export const StudentProfile = () => {
             <p className = 'content'>New on site ?</p>
             <button
                 className = 'link'
-                onClick = { () => navigate('/4') }>create profile here
+                onClick = { () => navigate('/5') }>create profile here
             </button>
             </NotFoundProfile>
         );

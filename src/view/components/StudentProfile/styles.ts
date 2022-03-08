@@ -43,7 +43,7 @@ flex-direction: column;
     .info-content {
         border: 1px solid #4d3871;
         padding: 15px;
-        width: 250px;
+        width: 300px;
         font-size: 19px;
     }
     .info-name {

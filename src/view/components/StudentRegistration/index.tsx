@@ -26,7 +26,7 @@ export const StudentRegistration = () => {
                 onSubmit = { (value) => {
                     console.log(studentProfile);
                     setStudentProfile(value);
-                    navigate('/5');
+                    navigate('/6');
                 } }>
                 {({ errors, touched, handleSubmit }) => (
                     <form onSubmit = { handleSubmit } >
