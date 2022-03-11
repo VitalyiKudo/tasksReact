@@ -1,5 +1,5 @@
 // Core
-import { BaseContact } from './types';
+import { BaseContact, DataState } from './types';
 
 // Slice
 export const startFetching: BaseContact = (state) => {
@@ -8,14 +8,14 @@ export const startFetching: BaseContact = (state) => {
 export const stopFetching: BaseContact = (state) => {
     state.isFetching = false;
 };
-export const setFetchingError: BaseContact = (state, action) => {
+export const setFetchingError: BaseContact<object> = (state, action) => {
     state.error = action.payload;
     state.data = null;
 };
-export const peopleFill: BaseContact = (state, action) => {
+export const peopleFill: BaseContact<DataState> = (state, action) => {
     state.data = action.payload;
     state.error = null;
 };
-export const setCurrentPerson: BaseContact = (state, action) => {
+export const setCurrentPerson: BaseContact<DataState> = (state, action) => {
     state.currentPerson = action.payload;
 };

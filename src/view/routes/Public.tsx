@@ -3,10 +3,11 @@ import React, { FC } from 'react';
 import { useRoutes, Navigate } from 'react-router-dom';
 import { Accordion } from '../components/Accordion/Accordion';
 import { Data } from '../components/Accordion/accordionsData';
+import { LessonSeven } from '../components/LessonSeven';
+import { People } from '../components/LessonSeven/People';
+import { Person } from '../components/LessonSeven/People/Person';
 import { News } from '../components/News/News';
 import { NoSense } from '../components/NoSense';
-import { People } from '../components/People';
-import { Person } from '../components/People/Person';
 import { PostsApiLoader } from '../components/PostsApiLoader';
 import { StudentProfile } from '../components/StudentProfile';
 import { StudentRegistration } from '../components/StudentRegistration';
@@ -47,9 +48,13 @@ export const Public: FC = () => {
         },
         {
             path:    '7',
+            element: <LessonSeven />,
+        },
+        {
+            path:    '7/people',
             element: <People />,
         },
-        { path: '7/:id', element: <Person /> },
+        { path: '7/people/:id', element: <Person /> },
 
     ]);
 

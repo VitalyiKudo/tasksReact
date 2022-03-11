@@ -2,10 +2,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { usePeopleFetch } from '../../../../bus/people';
+import { peopleAction } from '../../../../bus/people/slice';
 
 // Bus
-import { usePeopleFetch } from '../../../bus/people';
-import { peopleAction } from '../../../bus/people/slice';
 
 
 // Styles
@@ -19,8 +19,6 @@ export const People = () => {
     const { isFetching, data, error } = peopleFetch;
 
     if (peopleFetch) {
-        console.log(data);
-
         // errors
         if (error && error.status === 404) {
             return (
@@ -35,7 +33,10 @@ export const People = () => {
         }
         // spiner
         const spinner = isFetching && (
-            <p>Loading people...</p>
+            <S.Spinner>
+                <p className = 'message'>Loading people...</p>
+                <div className = 'loader' />
+            </S.Spinner>
         );
 
         // list of people
@@ -44,16 +45,15 @@ export const People = () => {
             const id =  person.url.match(idRegExp)[ 1 ];
 
             return (
-                <S.List>
+                <S.List key = { index }>
                     <button
                         className = 'person-link'
-                        key = { index }
                         onClick = { () => {
                             dispatch(peopleAction.setCurrentPerson(person));
-                            navigate(`/7/${id}`);
+                            navigate(`/7/people/${id}`);
                         } }>
                     <img
-                        alt = 'a'
+                        alt = 'person-image'
                         className = 'person-image'
                         src = 'https://png.pngitem.com/pimgs/s/130-1300243_computer-icons-portable-network-graphics-user-icon-caller.png'
                     />

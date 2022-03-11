@@ -1,15 +1,15 @@
 import { CaseReducer, PayloadAction } from '@reduxjs/toolkit';
 
 export type PeopleState = {
-    data:          string | Array<string> | null,
+    data:          DataState | null,
     isFetching:    boolean,
     error:         object | null,
-    currentPerson: string | Array<string> | null,
+    currentPerson: DataState| null,
 };
 
 export type DataState = {
-    birth_year: string,
-    created: string,
+    birth_year: number,
+    created: number,
     edited: string
     eye_color: string,
     films: Array<string>,
