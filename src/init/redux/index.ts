@@ -5,6 +5,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import togglers from '../../bus/client/togglers';
 import studentProfile from '../../bus/studentProfile';
 import people from '../../bus/people/slice';
+import films from '../../bus/films/slice';
 // import __entityName__ from '../../bus/__entityName__/slice';
 
 // Middleware
@@ -18,6 +19,7 @@ export const store = configureStore({
         togglers,
         studentProfile,
         people,
+        films,
         // __entityName__,
     },
     middleware,

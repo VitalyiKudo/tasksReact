@@ -14,11 +14,23 @@ export const LessonSeven = () => {
             <div className = 'nav'>
                 <button
                     className = 'nav-link'
-                    onClick = { () => navigate('people') }>People
+                    onClick = { () => navigate('people') }>
+                        <img
+                            alt = 'people'
+                            className = 'link-image'
+                            src = 'https://media.istockphoto.com/vectors/silhouette-avatars-persons-office-professional-profiles-anonymous-vector-id1180975836?k=20&m=1180975836&s=612x612&w=0&h=Nr7hHn1PbcrhfWL7BbOefI695HkTGu4x58ezcrpzMJ4='
+                        />
+                <p className = 'link-name'>People</p>
                 </button>
                 <button
                     className = 'nav-link'
-                    onClick = { () => navigate('films') }>Films
+                    onClick = { () => navigate('films') }>
+                        <img
+                            alt = 'films'
+                            className = 'link-image'
+                            src = 'https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg'
+                        />
+                <p className = 'link-name'>Films</p>
                 </button>
             </div>
         </S.Container>

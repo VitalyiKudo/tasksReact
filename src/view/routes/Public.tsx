@@ -4,6 +4,8 @@ import { useRoutes, Navigate } from 'react-router-dom';
 import { Accordion } from '../components/Accordion/Accordion';
 import { Data } from '../components/Accordion/accordionsData';
 import { LessonSeven } from '../components/LessonSeven';
+import { Films } from '../components/LessonSeven/Films';
+import { Film } from '../components/LessonSeven/Films/Film';
 import { People } from '../components/LessonSeven/People';
 import { Person } from '../components/LessonSeven/People/Person';
 import { News } from '../components/News/News';
@@ -51,10 +53,15 @@ export const Public: FC = () => {
             element: <LessonSeven />,
         },
         {
+            path:    '7/films',
+            element: <Films />,
+        },
+        {
             path:    '7/people',
             element: <People />,
         },
         { path: '7/people/:id', element: <Person /> },
+        { path: '7/films/:id', element: <Film /> },
 
     ]);
 

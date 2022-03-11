@@ -7,4 +7,9 @@ export const api = Object.freeze({
            return axios.get(`${root}/people`);
         },
     },
+    films: {
+        fetch: () => {
+           return axios.get(`${root}/films`);
+        },
+    },
 });
